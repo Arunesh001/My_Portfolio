@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aruneshwaran V - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-theme {
+      background: #121212;
+      color: #f0f0f0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #555;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      transition: color 0.3s;
+    }
+    .links a:hover {
+      color: #ff6600;
+    }
+    section {
+      padding: 2rem;
+      animation: slideUp 0.8s ease forwards;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "\2022 ";
+      color: #0077cc;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .project {
+      background: #f9f9f9;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .dark-theme .project {
+      background: #1e1e1e;
+    }
+    .project:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="themeSwitch" /> Toggle Dark/Light
+    </label>
+  </div>
+  <header>
+    <img src="assets/ARUNESH.JPG" alt="Aruneshwaran Photo" class="profile-pic" />
+    <h1>Aruneshwaran V</h1>
+    <p>Java Full Stack Developer | Spring Boot | MongoDB | GUVI Certified</p>
+    <div class="links">
+      <a href="https://github.com/Arunesh001" target="_blank">GitHub</a>
+      <a href="http://www.linkedin.com/in/aruneshwaran-v-7597061a5" target="_blank">LinkedIn</a>
+      <a href="Arunesh_Resume.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Aspiring Java Full Stack Developer with hands-on experience in building scalable web applications using Spring Boot, MongoDB, MySQL, and Thymeleaf. Currently upskilling through GUVI’s Full Stack Development program (IITM ResearchPark), with a strong foundation in Java, OOPs, and MVC architecture. Passionate about backend development and RESTful APIs, seeking opportunities to contribute to real-world software solutions and grow as a professional developer.</p>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Information Technology</strong> – PSV College of Engineering and Technology, Krishnagiri (2021–2025) | CGPA: 7.54</li>
+      <li><strong>Diploma in Electronics and Communication Engineering</strong> – IRT Polytechnic College, Krishnagiri (2017–2020) | 75%</li>
+      <li><strong>Secondary School</strong> – RC Fatima Boys High School, Krishnagiri | 72%</li>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Java, JavaScript</li>
+      <li><strong>Frameworks:</strong> Spring Boot, Spring MVC</li>
+      <li><strong>Frontend:</strong> HTML, CSS, Thymeleaf</li>
+      <li><strong>Databases:</strong> MongoDB, MySQL</li>
+      <li><strong>Tools:</strong> Git, Postman, VS Code, IntelliJ IDEA</li>
+      <li><strong>Concepts:</strong> REST APIs, MVC, CRUD operations, Role-Based Access Control</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Bus Reservation System</h3>
+      <p>Built with Spring Boot & MongoDB. Implements role-based login, bus trip booking, and admin trip management.</p>
+      <p><a href="https://bus-reservation-capstone.onrender.com" target="_blank">Live Demo</a></p>
+    </div>
+    <div class="project">
+      <h3>Hospital Management System</h3>
+      <p>A CRUD-based application for doctors, patients, medicines, and appointments.</p>
+      <p><a href="https://hospital-management-mini-2.onrender.com" target="_blank">Live Demo</a></p>
+    </div>
+    <div class="project">
+      <h3>Employee Management System</h3>
+      <p>Simple CRUD application to manage employees using Spring Boot and MongoDB.</p>
+      <p><a href="https://employee-management-mini-1.onrender.com" target="_blank">Live Demo</a></p>
+    </div>
+  </section>
+
+  <section class="languages">
+    <h2>Languages Known</h2>
+    <ul>
+      <li>Tamil</li>
+      <li>English</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> aruneshwaranv8@gmail.com</p>
+    <p><strong>Phone:</strong> +91 7094950916</p>
+    <p><strong>Address:</strong> 93-B NSK St., Krishnagiri, Tamil Nadu 635001</p>
+  </section>
+
+  <script>
+    const switchBtn = document.getElementById('themeSwitch');
+    switchBtn.addEventListener('change', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+</body>
+</html>

@@ -1,180 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aruneshwaran V - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      transition: background 0.3s, color 0.3s;
-    }
-    .dark-theme {
-      background: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      animation: fadeIn 1s ease-in-out;
-    }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #555;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #0077cc;
-      transition: color 0.3s;
-    }
-    .links a:hover {
-      color: #ff6600;
-    }
-    section {
-      padding: 2rem;
-      animation: slideUp 0.8s ease forwards;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "\2022 ";
-      color: #0077cc;
-    }
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .project {
-      background: #f9f9f9;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-radius: 8px;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-    .dark-theme .project {
-      background: #1e1e1e;
-    }
-    .project:hover {
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    @media (max-width: 768px) {
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="theme-toggle">
-    <label>
-      <input type="checkbox" id="themeSwitch" /> Toggle Dark/Light
-    </label>
-  </div>
-  <header>
-    <img src="assets/ARUNESH.JPG" alt="Aruneshwaran Photo" class="profile-pic" />
-    <h1>Aruneshwaran V</h1>
-    <p>Java Full Stack Developer | Spring Boot | MongoDB | GUVI Certified</p>
-    <div class="links">
-      <a href="https://github.com/Arunesh001" target="_blank">GitHub</a>
-      <a href="http://www.linkedin.com/in/aruneshwaran-v-7597061a5" target="_blank">LinkedIn</a>
-      <a href="https://drive.google.com/file/d/1-_3IcNVULWS_z_7YlarNxyxNSGJ5kdIQ/view?usp=sharing" download>Resume</a>
-    </div>
-  </header>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aruneshwaran | Portfolio</title>
+    <link rel="icon" href="Image/_MG_5735.JPG" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dark-mode.css" />
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Aspiring Java Full Stack Developer with hands-on experience in building scalable web applications using Spring Boot, MongoDB, MySQL, and Thymeleaf. Currently upskilling through GUVI’s Full Stack Development program (IITM ResearchPark), with a strong foundation in Java, OOPs, and MVC architecture. Passionate about backend development and RESTful APIs, seeking opportunities to contribute to real-world software solutions and grow as a professional developer.</p>
-  </section>
-
-  <section class="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Information Technology</strong> – PSV College of Engineering and Technology, Krishnagiri (2021–2025) | CGPA: 7.54</li>
-      <li><strong>Diploma in Electronics and Communication Engineering</strong> – IRT Polytechnic College, Krishnagiri (2017–2020) | 75%</li>
-      <li><strong>Secondary School</strong> – RC Fatima Boys High School, Krishnagiri | 72%</li>
-    </ul>
-  </section>
-
-  <section class="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java, JavaScript</li>
-      <li><strong>Frameworks:</strong> Spring Boot, Spring MVC</li>
-      <li><strong>Frontend:</strong> HTML, CSS, Thymeleaf</li>
-      <li><strong>Databases:</strong> MongoDB, MySQL</li>
-      <li><strong>Tools:</strong> Git, Postman, VS Code, IntelliJ IDEA</li>
-      <li><strong>Concepts:</strong> REST APIs, MVC, CRUD operations, Role-Based Access Control</li>
-    </ul>
-  </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Bus Reservation System</h3>
-      <p>Built with Spring Boot & MongoDB. Implements role-based login, bus trip booking, and admin trip management.</p>
-      <p><a href="https://bus-reservation-capstone.onrender.com" target="_blank">Live Demo</a></p>
-    </div>
-    <div class="project">
-      <h3>Hospital Management System</h3>
-      <p>A CRUD-based application for doctors, patients, medicines, and appointments.</p>
-      <p><a href="https://hospital-management-mini-2.onrender.com" target="_blank">Live Demo</a></p>
-    </div>
-    <div class="project">
-      <h3>Employee Management System</h3>
-      <p>Simple CRUD application to manage employees using Spring Boot and MongoDB.</p>
-      <p><a href="https://employee-management-mini-1.onrender.com" target="_blank">Live Demo</a></p>
-    </div>
-  </section>
-
-  <section class="languages">
-    <h2>Languages Known</h2>
-    <ul>
-      <li>Tamil</li>
-      <li>English</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> aruneshwaranv8@gmail.com</p>
-    <p><strong>Phone:</strong> +91 7094950916</p>
-    <p><strong>Address:</strong> 93-B NSK St., Krishnagiri, Tamil Nadu 635001</p>
-  </section>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-WZXPVQDR2Q"
+  ></script>
   <script>
-    const switchBtn = document.getElementById('themeSwitch');
-    switchBtn.addEventListener('change', () => {
-      document.body.classList.toggle('dark-theme');
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WZXPVQDR2Q");
   </script>
-</body>
+  <body class="container-fluid body_section">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand brand-name" href="#">Aruneshwaran</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link headerachor" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link headerachor" href="education.html"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link headerachor" href="skill.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link headerachor" href="project.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link headerachor" href="contact.html">Contact Me</a>
+            </li>
+            <li>
+              <iframe
+                id="toggle-iframe"
+                onload="onIframeLoad()"
+                src="toggle.html"
+              ></iframe>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="Home">
+      <div class="row column1">
+        <div class="col-lg-6 col-md-6 first-image">
+          <img class="boyimage" src="Image/20200630_162659.gif" alt="" />
+        </div>
+        <div class="col-lg-6 section-1">
+          <h1 class="Hello">
+            Hello All! I'm Aruneshwaran <span class="wave">👋</span>
+          </h1>
+          <p>
+             Versatile Full-Stack Java Developer with practical expertise in crafting scalable web solutions utilizing Spring
+             Boot, MongoDB, MySQL, and Thyme leaf. Certified through GUVI's Full-Stack Development Program. Adept at
+             architecting and deploying RESTful APIs, implementing Object-Oriented Programming (OOP) principles, and
+             applying the Model-View-Controller (MVC) design pattern. Demonstrated ability in delivering live applications
+             and enhancing system efficiency in production environments.
+          </p>
+          <div class="social_media_icon">
+            <a
+              class="btn"
+              href="https://www.instagram.com/aruneshwaran._.v/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="btn"
+              href="http://linkedin.com/in/aruneshwaran-v-7597061a5"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a
+              class="btn"
+              href="https://github.com/Arunesh001"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              class="btn"
+              href="mailto:aruneshwaranv8@gmail.com"
+              target="_blank"
+            >
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </div>
+        <div class="Image-boy col-lg-6">
+          <img class="boy" src="Image/Boy-image.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="Whatido">
+      <h1>What I Do ?</h1>
+      <div class="row feature-1">
+        <div class="col-lg-6 col-md-6 Feature-first-image">
+          <img class="Feature-svg-image" src="Image/website.svg" alt="" />
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <h1 class="Feature-Heading">Frontend Development</h1>
+          <ul class="dev-icon">
+            <li><i class="fab fa-html5 fa-5x" style="color: #db4517"></i></li>
+            <li><i class="fab fa-css3-alt fa-5x" style="color: #157bb6"></i></li>
+            <li>
+              <i class="fab fa-alt fa-6x">
+                <img src="https://logo.svgcdn.com/l/thymeleaf-icon.svg" alt="Thymeleaf logo" width="70" height="70">
+              </i>
+            </li>
+            <li><i class="fab fa-js-square fa-5x" style="color: #f7df1e"></i></li>
+
+          </ul>
+          <div class="Data-Analytic">
+            <p class="Features-paragraph">
+              💻 Building fully responsive website 
+              frontends using HTML, CSS, Bootstrap, and JavaScript.
+            </p>
+            <p class="Features-paragraph">
+              🎯 Focused on clean design, mobile responsiveness,
+               and user-friendly interfaces.
+            </p>
+            <p>
+              📚 Currently skilled in frontend development 
+              and continuously expanding my knowledge.
+            </p>
+            <p>
+              🔧 Passionate about learning and building 
+              real-world applications with modern web tools.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row feature-2">
+        <div class="col-lg-6 col-md-6 feature-web">
+          <h1 class="Feature-Heading">Backend Development</h1>
+          <ul class="dev-icon">
+            <li><i class="devicon-java-plain-wordmark colored" style="font-size: 5rem;"></i></li>
+            <li>
+              <i class="devicon-spring-plain-wordmark colored" style="font-size: 5rem;"></i>
+            </li>
+            <li>
+              <i class="devicon-mysql-plain-wordmark colored" style="font-size: 5rem;"></i>
+            </li>
+            <li>
+              <i class="devicon-mongodb-plain-wordmark colored" style="font-size: 5rem;"></i>
+            </li>
+          </ul>
+          <div class="Data-Analytic">
+            <p class="Features-paragraph">
+              ⚙️ Proficient in backend development using Java,
+               Spring Boot, and J2EE.
+            </p>
+            <p class="Features-paragraph">
+              🔐 Skilled in implementing 
+              authentication and authorization using Spring Security.
+            </p>
+            <p class="Features-paragraph">
+              🌐 Experienced in building and consuming 
+              RESTful APIs for web integrations.
+            </p>
+            <p>
+              <p>🗄️ Knowledgeable in working with databases (MySQL, MongoDB).</p>
+
+              <p>🧩 Familiar with MVC architecture, service layers,
+              and application layering best practices.
+              </p>
+              <p>🚀 Hands-on with deploying Java-based applications and managing backend performance.</p>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 Feature-second-image">
+          <img class="Feature-svg-image" src="Image/Data_Analysis.svg" alt="" />
+        </div>
+      </div>
+      <div class="row feature-3">
+        <div class="col-lg-6 col-md-6 Feature-third-image">
+          <img class="Feature-svg-image-3" src="Image/Coding.svg" alt="" />
+        </div>
+        <div class="col-lg-6 col-md-6 feature-coding">
+          <h1 class="Feature-Heading">Tools and Technologys</h1>
+          <ul class="dev-icon">
+            <li><i class="devicon-intellij-plain-wordmark colored" style="font-size: 5rem;"></i></li>
+            <li><i class="devicon-eclipse-plain colored" style="font-size: 5rem;"></i></li>
+            <li><i class="devicon-vscode-plain colored" style="font-size: 5rem;"></i></li>
+            <li>
+              <i class="devicon-github-original colored" style="font-size: 5rem;"></i>
+            </li>
+            <li><i class="devicon-postman-plain colored" style="font-size: 5rem;"></i></li>
+          </ul>
+          <div class="Data-Analytic">
+            <p class="Features-paragraph">
+              <p>🛠️ Experienced with popular IDEs and editors like Visual 
+              Studio Code, IntelliJ IDEA, and Eclipse.</p>
+
+              <p>🗃️ Proficient in using Git and GitHub for version control 
+              and collaborative development.</p>
+
+              <p>🔍 Skilled in API testing and debugging using Postman.</p>
+
+              <p>📑 Comfortable documenting and exploring RESTful APIs with Swagger.</p>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">&copy; 
+      <a 
+      href="http://linkedin.com/in/aruneshwaran-v-7597061a5"
+      target="_blank"
+      >Developed by Aruneshwaran</a>
+    </footer>
+    <script src="dark-mode.js"></script>
+  </body>
 </html>
